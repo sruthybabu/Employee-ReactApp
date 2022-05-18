@@ -4,13 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Addemployee from './components/Addemployee';
 import Searchemployee from './components/Searchemployee';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div>
 
-<Addemployee/>
-<Searchemployee/>
+<BrowserRouter>
+<Routes>
+<Route path="/" exact element={<Addemployee/>}/>
+<Route path="/search" exact element={<Searchemployee/>}/>
+</Routes>
 
+</BrowserRouter>
     </div>
   );
 }
